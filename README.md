@@ -1,6 +1,6 @@
 # Wikipedia Viewer
 
-A simple Wikipedia search utility.
+A simple Wikipedia search utility. Access it (here)[https://kebien6020.github.io/wikipedia-viewer/].
 
 ## Features
 
