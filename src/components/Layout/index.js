@@ -69,7 +69,7 @@ export default class Layout extends Component {
     const state = this.state
     const results = state.results.map((article, i) => (
       <div className="article" key={i}>
-        <a href={article.link}>
+        <a href={article.link} target="_blank">
           <h2>{article.name}</h2>
           <p>{article.descr}</p>
         </a>

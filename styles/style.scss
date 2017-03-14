@@ -44,6 +44,17 @@ body > main {
   }
 }
 
+#random {
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: blue;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 #app-root {
 
   .layout {
