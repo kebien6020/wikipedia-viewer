@@ -9,4 +9,4 @@ A simple Wikipedia search utility.
 
 ## About this
 
-This is a little project for a FreeCodeCamp chanllenge.
+This is a little project for a FreeCodeCamp challenge.
