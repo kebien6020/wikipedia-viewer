@@ -1,0 +1,115 @@
+@import 'mixins';
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  font-size: 18px;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body > header {
+  @include center;
+  width: 100%;
+  @include desktop {
+    width: 70%;
+  }
+  margin-bottom: 1em;
+  h1 {
+    padding-right: 2px;
+    padding-left: 2px;
+    text-align: center;
+    font-size: 2.5em;
+    @include desktop {
+      font-size: 3.5em;
+    }
+    margin-bottom: 0;
+    margin-top: 2px;
+    @include desktop {
+      margin-top: 0.3em;
+    }
+  }
+  small {
+    display: block;
+    text-align: right;
+    font-size: 14px;
+  }
+}
+body > main {
+  margin-bottom: 10px;
+  @include center;
+  width: 80%;
+  @include desktop {
+    width: 50%;
+  }
+}
+
+#app-root {
+
+  .layout {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    padding: 1em;
+    background-color: #fafafa;
+    position: relative;
+
+    &.expanded {
+      top: 0;
+      transition: top 0.3s ease-out;
+    }
+
+    &.collapsed {
+      top: 20vh;
+      transition: top 0.3s ease-out;
+    }
+  }
+
+  .search-box {
+    line-height: 34px;
+    height: 34px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    background-color: white;
+    padding: 4px;
+    input {
+      font: 18px arial,sans-serif;
+      width: 100%;
+      border: none;
+      height: 100%;
+      outline: none;
+    }
+  }
+
+  .expanded .search-box {
+    margin-bottom: 1em;
+  }
+
+  .collapsed .articles {
+    max-height: 0;
+    transition: max-height 0.35s ease-in;
+  }
+
+  .expanded .articles {
+    max-height: 1000px;
+    transition: max-height 0.60s ease-out;
+  }
+
+  @keyframes fadein {
+      from {opacity: 0;}
+      to {opacity: 1;}
+  }
+
+  .article {
+    @include hover-floating;
+    padding: 0.3em 1em;
+    margin: -0.3em -1em;
+    animation: fadein 1s ease-out;
+    a {
+      color: black;
+      text-decoration: none;
+      display: block;
+    }
+    h2 {
+      margin-top: 3px;
+    }
+  }
+}

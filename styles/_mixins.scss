@@ -1,0 +1,29 @@
+@mixin desktop {
+  @media (min-width: 640px) {
+    @content
+  }
+}
+
+@mixin hover-floating {
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition: background-color .25s,color .15s,box-shadow .15s,opacity .25s,filter .25s,border .15s;
+  }
+}
+
+@mixin button {
+  @include hover-floating;
+  margin-top: 0.5em;
+  color: white;
+  a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    padding: 1em 0.5em;
+  }
+}
+
+@mixin center {
+  margin-left: auto;
+  margin-right: auto;
+}
